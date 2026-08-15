@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaHandsHelping, FaHeart, FaHome, FaInfoCircle } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { GrGallery } from "react-icons/gr";
+import { BiSolidContact } from "react-icons/bi";
+
+
 import { IoMdClose } from "react-icons/io";
 
 
@@ -11,7 +15,8 @@ const Nav = () => {
   const menuLinks = [
     { id: 1, name: "Home", to: "/", icon: FaHome },
     { id: 2, name: "About", to: "/about", icon: FaInfoCircle },
-    { id: 3, name: "Outreaches", to: "/#outreaches", icon: FaHandsHelping },
+    { id: 3, name: "Projects", to: "/", icon: FaHandsHelping },
+    { id: 4, name: "Contact", to: "/", icon: BiSolidContact },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,15 +25,15 @@ const Nav = () => {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <nav className="mx-auto w-full max-w-6xl rounded-3xl border border-[#dfeadf] bg-white/90 px-4 py-3 shadow-[0_10px_30px_rgba(18,64,34,0.08)] backdrop-blur-sm">
         <div className="flex items-center justify-between gap-4">
-          <Link to="/" className="flex items-center" aria-label="WINCare home">
+          <Link to="/" className="flex flex-shrink-0 items-center" aria-label="WINCare home">
             <img
               src={logo}
               alt="WINCare Logo"
-              className="h-11 w-auto object-contain"
+              className="h-11 w-auto flex-shrink-0 object-contain"
             />
           </Link>
 
-          <div className="hidden items-center gap-2 rounded-full bg-[#edf6ef] p-1 md:flex">
+          <div className="hidden flex-1 items-center justify-center gap-2 rounded-full bg-[#edf6ef] p-1 md:flex">
             {menuLinks.map(({ id, name, to, icon: Icon }) => (
               <Link
                 key={id}
@@ -43,7 +48,7 @@ const Nav = () => {
 
           <a
             href="#"
-            className="hidden items-center gap-2 rounded-full bg-[#5baa8a] px-5 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:bg-[#4A9679] md:inline-flex"
+            className="hidden flex-shrink-0 items-center gap-2 rounded-full bg-[#5baa8a] px-5 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:bg-[#4A9679] md:inline-flex"
           >
             <FaHeart className="text-base" />
             Donate

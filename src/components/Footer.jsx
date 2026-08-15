@@ -1,7 +1,7 @@
 import React from "react";
 import {
   FaEnvelope,
-  FaFacebookF,
+  FaLinkedin,
   FaInstagram,
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -38,13 +38,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#/" className="transition hover:text-white">
-                  Services
+                <a href="" className="transition hover:text-white">
+                  Projects
                 </a>
               </li>
+              
               <li>
                 <a href="/#/" className="transition hover:text-white">
-                  Outreaches
+                  Contact
                 </a>
               </li>
             </ul>
@@ -76,14 +77,14 @@ const Footer = () => {
 
           <div className="flex items-center gap-4 text-[#d7edf0]">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/wincarefoundation/posts/"
               aria-label="Facebook"
               className="rounded-full border border-white/10 p-2 transition hover:border-[#9adcc2] hover:text-white"
             >
-              <FaFacebookF className="text-sm" />
+              <FaLinkedin className="text-sm" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/w.i.n.care/?hl=en"
               aria-label="Instagram"
               className="rounded-full border border-white/10 p-2 transition hover:border-[#9adcc2] hover:text-white"
             >
