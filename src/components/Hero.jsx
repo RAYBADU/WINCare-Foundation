@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight, FaHeart, FaUsers, FaHandshake } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import heroImage1 from "../assets/hero-images/photo_2026-08-15_00-09-34.jpg";
 import heroImage2 from "../assets/hero-images/photo_2026-08-15_00-11-24.jpg";
@@ -72,21 +73,21 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              <a
-                href="#"
+              <Link to="/donate"
+                
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5baa8a] to-[#4a9577] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(91,170,138,0.25)] transition-transform duration-300 active:scale-95 md:hover:scale-105 md:hover:shadow-[0_12px_32px_rgba(91,170,138,0.35)]"
               >
                 Donate today
 
                 <FaArrowRight className="text-xs transition-transform duration-300 md:group-hover:translate-x-1" />
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link to="/projects"
+                
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#5baa8a] bg-white px-6 py-3.5 text-sm font-semibold text-[#2e7d5a] shadow-[0_4px_12px_rgba(18,57,40,0.06)] transition-colors duration-300 active:scale-95 md:hover:border-[#4a9577] md:hover:bg-[#f0fdf6] md:hover:shadow-[0_8px_20px_rgba(91,170,138,0.12)]"
               >
                 Explore outreach
-              </a>
+              </Link>
             </motion.div>
 
             {/* Stats */}

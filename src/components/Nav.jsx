@@ -15,8 +15,8 @@ const Nav = () => {
   const menuLinks = [
     { id: 1, name: "Home", to: "/", icon: FaHome },
     { id: 2, name: "About", to: "/about", icon: FaInfoCircle },
-    { id: 3, name: "Projects", to: "/", icon: FaHandsHelping },
-    { id: 4, name: "Contact", to: "/", icon: BiSolidContact },
+    { id: 3, name: "Projects", to: "/projects", icon: FaHandsHelping },
+    { id: 4, name: "Contact", to: "/contacts", icon: BiSolidContact },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,13 +46,13 @@ const Nav = () => {
             ))}
           </div>
 
-          <a
-            href="#"
+          <Link to="/donate"
+            
             className="hidden flex-shrink-0 items-center gap-2 rounded-full bg-[#5baa8a] px-5 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:bg-[#4A9679] md:inline-flex"
           >
             <FaHeart className="text-base" />
             Donate
-          </a>
+          </Link>
 
           <button
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -80,15 +80,14 @@ const Nav = () => {
                 </Link>
               ))}
 
-              <a
-                href="#
-                "
+              <Link to="/donate"
+              
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-[#5baa8a] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#163c2f]"
               >
                 <FaHeart className="text-base" />
                 Donate
-              </a>
+              </Link>
             </div>
           </div>
         )}

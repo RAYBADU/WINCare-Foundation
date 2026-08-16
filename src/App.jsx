@@ -3,6 +3,9 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts";
+import Donation from "./pages/Donation";
 
 const App = () => {
   return (
@@ -12,6 +15,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/donate" element={<Donation />} />
+
       </Routes>
 
       <Footer />

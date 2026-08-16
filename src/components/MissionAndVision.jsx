@@ -23,9 +23,9 @@ const MissionAndVision = () => {
           </div>
           <h3 className="text-2xl font-semibold">Our Mission</h3>
           <p className="mt-4 text-base leading-7 text-[#f0fdf6]">
-            To improve access to quality healthcare, health information, and
-            community support so that individuals and families can live
-            healthier, safer, and more empowered lives.
+          We tirelessly work to improve health outcomes in remote areas across Ghana through a preventive healthcare 
+model, community empowerment via health education and screenings, and the integration of research and 
+publication to inform practice, policy and long-term impact. 
           </p>
         </div>
 
@@ -35,9 +35,8 @@ const MissionAndVision = () => {
           </div>
           <h3 className="text-2xl font-semibold text-[#123928]">Our Vision</h3>
           <p className="mt-4 text-base leading-7 text-[#4a655a]">
-            To build healthier, more resilient communities where every person
-            has access to essential care, informed choices, and the support
-            needed to thrive.
+           To be a beacon of hope, bridging the healthcare gap in underserved communities and ensuring that everyone 
+has access to quality healthcare.  
           </p>
         </div>
       </div>
