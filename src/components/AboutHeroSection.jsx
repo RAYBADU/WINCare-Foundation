@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroImage from "../assets/about-page-images/photo_2026-08-15_00-41-11.jpg";
+import { Link } from "react-router-dom";
 
 const AboutHeroSection = () => {
   return (
@@ -53,7 +54,6 @@ const AboutHeroSection = () => {
       ========================================================== */}
       <div className="relative z-10 flex min-h-[90vh] items-center md:min-h-screen">
         <div className="mx-auto w-full max-w-6xl px-4 md:px-8 lg:px-12">
-
           <motion.div
             className="max-w-2xl"
             initial={{ opacity: 0, y: 18 }}
@@ -79,7 +79,6 @@ const AboutHeroSection = () => {
               "
             >
               <span className="h-2 w-2 rounded-full bg-[#5baa8a]" />
-
               Our Story
             </div>
 
@@ -94,7 +93,6 @@ const AboutHeroSection = () => {
               "
             >
               Transforming <br />
-
               <span
                 className="
                   bg-gradient-to-r
@@ -120,58 +118,18 @@ const AboutHeroSection = () => {
                 sm:text-lg
               "
             >
-              We're committed to improving community health through
-              accessible healthcare, trustworthy education, and
-              compassionate outreach that empowers lives.
+              We're committed to improving community health through accessible
+              healthcare, trustworthy education, and compassionate outreach that
+              empowers lives.
             </p>
 
             {/* =====================================================
                 CALL TO ACTIONS
             ====================================================== */}
             <div className="mt-8 flex flex-wrap gap-4">
-
-              {/* Primary CTA */}
-              <a
-                href="#"
-                className="
-                  group inline-flex items-center gap-2
-                  rounded-full
-                  bg-gradient-to-r
-                  from-[#5baa8a]
-                  to-[#4a9577]
-                  px-7 py-3.5
-                  font-semibold text-white
-                  shadow-[0_8px_24px_rgba(91,170,138,0.2)]
-                  transition-transform duration-300
-                  active:scale-95
-                  md:hover:scale-105
-                  md:hover:shadow-[0_12px_32px_rgba(91,170,138,0.3)]
-                "
-              >
-                Learn Our Mission
-
-                <svg
-                  className="
-                    h-4 w-4
-                    transition-transform duration-300
-                    md:group-hover:translate-x-1
-                  "
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-
               {/* Secondary CTA */}
-              <a
-                href="#"
+              <Link
+                to="/gallery"
                 className="
                   inline-flex items-center
                   rounded-full
@@ -185,8 +143,8 @@ const AboutHeroSection = () => {
                   md:hover:bg-white/10
                 "
               >
-                Explore Our Work
-              </a>
+                View Our Gallery
+              </Link>
             </div>
           </motion.div>
         </div>

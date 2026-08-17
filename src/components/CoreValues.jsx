@@ -1,14 +1,12 @@
 import React from 'react'
 import {
-  FaArrowRight,
-  FaCheckCircle,
-  FaClipboardCheck,
-  FaHandsHelping,
   FaHeart,
-  FaMedkit,
   FaShieldAlt,
-  FaStethoscope,
   FaUsers,
+  FaClipboardCheck,
+  FaHandHoldingHeart,
+  FaPeopleArrows,
+  FaLightbulb,
 } from "react-icons/fa";
 
 const CoreValues = () => {
@@ -18,32 +16,37 @@ const values = [
   {
     icon: FaHeart,
     title: "Compassion",
-    text: "We meet people with empathy, dignity, and practical care.",
+    text: "We treat every person with empathy, dignity, and genuine care.",
   },
   {
     icon: FaShieldAlt,
     title: "Integrity",
-    text: "We act honestly, transparently, and with accountability in all we do.",
+    text: "We act with honesty, transparency, accountability, and trust.",
   },
   {
     icon: FaUsers,
     title: "Community",
-    text: "We build lasting solutions with community voices and local partnerships.",
+    text: "We listen to communities and build solutions around their needs.",
   },
   {
     icon: FaClipboardCheck,
     title: "Excellence",
-    text: "We strive for quality, evidence-based care and service delivery.",
+    text: "We pursue quality, evidence-based care, and meaningful impact.",
   },
   {
-    icon: FaStethoscope,
-    title: "Accessibility",
-    text: "We remove barriers so care and health information reach everyone.",
+    icon: FaHandHoldingHeart,
+    title: "Stewardship",
+    text: "We use resources responsibly to expand access to care and health information.",
   },
   {
-    icon: FaCheckCircle,
-    title: "Accountability",
-    text: "We take responsibility for outcomes and trust-based stewardship.",
+    icon: FaPeopleArrows,
+    title: "Teamwork",
+    text: "We work together with volunteers, partners, and communities to create lasting change.",
+  },
+  {
+    icon: FaLightbulb,
+    title: "Innovation",
+    text: "We embrace practical, creative solutions to improve health and reach more people.",
   },
 ];
 

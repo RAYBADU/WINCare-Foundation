@@ -11,7 +11,7 @@ import ProjectsCTA from "../components/ProjectsCTA";
 
 const Projects = () => {
   return (
-    <main className="overflow-hidden bg-[#f7fbf8] text-[#123928]">
+    <main className="overflow-hidden bg-[#f7fbf8] text-[#123928] pt-22">
       <ProjectsHero />
       <ProjectExplorer />
       <FeaturedProject />

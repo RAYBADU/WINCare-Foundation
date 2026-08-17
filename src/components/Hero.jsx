@@ -7,8 +7,6 @@ import heroImage1 from "../assets/hero-images/photo_2026-08-15_00-09-34.jpg";
 import heroImage2 from "../assets/hero-images/photo_2026-08-15_00-11-24.jpg";
 import heroImage3 from "../assets/hero-images/photo_2026-08-15_00-17-26.jpg";
 
-
-
 const outreachImages = [
   {
     src: heroImage1,
@@ -32,7 +30,6 @@ const Hero = () => {
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-
           {/* LEFT CONTENT */}
           <motion.div
             className="max-w-xl"
@@ -56,14 +53,15 @@ const Hero = () => {
 
             {/* Heading */}
             <h1 className="text-4xl font-semibold leading-tight text-[#123928] sm:text-5xl lg:text-6xl">
-              Nurturing Health, Impacting Lives.
+              Nurturing Health,{" "}
+              <span className="text-[#4a9577]">Impacting Lives.</span>
             </h1>
 
             {/* Description */}
             <p className="mt-5 text-base leading-7 text-[#4a655a] sm:text-lg">
               We support families, uplift vulnerable communities, and mobilize
-              volunteers to create lasting impact through compassion, care,
-              and action.
+              volunteers to create lasting impact through compassion, care, and
+              action.
             </p>
 
             {/* Buttons */}
@@ -73,17 +71,16 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
-              <Link to="/donate"
-                
+              <Link
+                to="/donate"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5baa8a] to-[#4a9577] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(91,170,138,0.25)] transition-transform duration-300 active:scale-95 md:hover:scale-105 md:hover:shadow-[0_12px_32px_rgba(91,170,138,0.35)]"
               >
                 Donate today
-
                 <FaArrowRight className="text-xs transition-transform duration-300 md:group-hover:translate-x-1" />
               </Link>
 
-              <Link to="/projects"
-                
+              <Link
+                to="/projects"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#5baa8a] bg-white px-6 py-3.5 text-sm font-semibold text-[#2e7d5a] shadow-[0_4px_12px_rgba(18,57,40,0.06)] transition-colors duration-300 active:scale-95 md:hover:border-[#4a9577] md:hover:bg-[#f0fdf6] md:hover:shadow-[0_8px_20px_rgba(91,170,138,0.12)]"
               >
                 Explore outreach
@@ -117,7 +114,7 @@ const Hero = () => {
 
                 <span>
                   <strong className="block text-base text-[#123928]">
-                    120+
+                    20+
                   </strong>
                   outreach programs
                 </span>
@@ -142,7 +139,6 @@ const Hero = () => {
             <div className="absolute -right-6 bottom-8 h-24 w-24 rounded-full bg-[#dfeaf7]/60 blur-none md:blur-2xl" />
 
             <div className="relative grid gap-4 sm:grid-cols-2">
-
               {/* Main Image */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -179,7 +175,6 @@ const Hero = () => {
                   className="h-48 w-full rounded-[1.25rem] object-cover"
                 />
               </div>
-
             </div>
           </motion.div>
         </div>

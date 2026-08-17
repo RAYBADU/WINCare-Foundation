@@ -6,6 +6,8 @@ import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import Donation from "./pages/Donation";
+import Gallery from "./pages/Gallery";
+import TeamPage from "./pages/TeamPage";
 
 const App = () => {
   return (
@@ -18,7 +20,8 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/donate" element={<Donation />} />
-
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/team" element={<TeamPage />} />
       </Routes>
 
       <Footer />

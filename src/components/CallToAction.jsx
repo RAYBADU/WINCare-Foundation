@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 const CallToAction = () => {
   return (
@@ -26,13 +27,13 @@ const CallToAction = () => {
             help bring practical hope to families and communities in need.
           </p>
 
-          <a
+          <Link to="/donate"
             href="#"
             className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5baa8a] to-[#4a9577] px-7 py-4 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(91,170,138,0.3)] transition-all hover:shadow-[0_12px_32px_rgba(91,170,138,0.4)]  duration-300 hover:bg-[#4A9679] "
           >
             Support a cause
             <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </motion.div>
       </section>
   )

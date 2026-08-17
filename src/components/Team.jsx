@@ -1,5 +1,6 @@
 import React from "react";
 import Eugene from "../assets/team-images/eugene.jpg";
+import Emma from "../assets/team-images/emma.jpg"
 
 const teamMembers = [
   {
@@ -8,35 +9,11 @@ const teamMembers = [
     image: Eugene,
   },
   {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
+    name: "Emmanuel Boateng",
+    role: "Communications Head",
+    image: Emma,
   },
-  {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
-  },
-  {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
-  },
-  {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
-  },
-  {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
-  },
-  {
-    name: "Dr. Eugene Attah Wireko",
-    role: "President",
-    image: Eugene,
-  },
+
 ];
 
 const Team = () => {

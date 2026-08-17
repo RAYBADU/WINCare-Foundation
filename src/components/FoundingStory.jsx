@@ -113,7 +113,7 @@ const FoundingStory = () => {
                   {/* Stats */}
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-2xl bg-[#123928] p-4 text-white">
-                      <p className="text-3xl font-bold">15k+</p>
+                      <p className="text-3xl font-bold">8k+</p>
 
                       <p className="mt-1 text-sm text-[#cfe6d9]">
                         People reached
@@ -122,7 +122,7 @@ const FoundingStory = () => {
 
                     <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-[#dfeadf]">
                       <p className="text-3xl font-bold text-[#123928]">
-                        42
+                        20+
                       </p>
 
                       <p className="mt-1 text-sm text-[#4a655a]">

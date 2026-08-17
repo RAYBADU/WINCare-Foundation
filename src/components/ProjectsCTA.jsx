@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 const ProjectsCTA = () => {
   return (
     <section className="mx-auto max-w-5xl px-6 py-24 text-center md:px-8">
@@ -16,9 +16,10 @@ const ProjectsCTA = () => {
         skills, resources, or support can help us take the next step.
       </p>
 
-      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+      <div className=" mt-8 flex flex-col justify-center gap-3 sm:flex-row">
         <button className="rounded-full border border-[#c8ddd0] bg-white px-7 py-3 font-semibold text-[#123928] transition hover:bg-[#f0f7f2]">
-          Support a project
+          <Link to="/donate">Support a  project</Link>
+          
         </button>
       </div>
     </section>

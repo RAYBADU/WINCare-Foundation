@@ -4,6 +4,7 @@ import {
   
 } from "react-icons/fa";
 import volunterImage from "../assets/about-page-images/photo_2026-08-15_00-33-51.jpg";
+import {Link} from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -31,13 +32,13 @@ const WhoWeAre = () => {
                    the long term.
                  </p>
    
-                 <a
-                   href=""
+                 <Link to="/donate"
+                   
                    className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5baa8a] to-[#4a9577] px-5 py-3.5 text-sm font-semibold text-white transition hover:shadow-[0_12px_32px_rgba(91,170,138,0.35)]"
                  >
                    Donate Now
                    <FaArrowRight className="text-xs" />
-                 </a>
+                 </Link>
                </div>
    
                <div className="overflow-hidden rounded-[24px] border border-[#dfeadf] bg-white p-3 shadow-[0_20px_45px_rgba(18,57,40,0.08)]">

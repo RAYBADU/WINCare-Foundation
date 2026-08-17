@@ -22,7 +22,7 @@ import Newsletter from "../components/Newsletter";
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-[#f7faf7] text-[#123928]">
-      <main className="pt-28">
+      <main className="pt-20">
         <AboutHeroSection />
         <WhoWeAre />
         <MissionAndVision />

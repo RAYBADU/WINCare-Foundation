@@ -5,7 +5,7 @@ import {
   FaCalendarAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import image1 from "../assets/project-page-images/photo_2026-08-15_00-16-34.jpg";
+import image1 from "../assets/project-page-images/photo_2026-08-15_00-08-35.jpg";
 import image2 from "../assets/project-page-images/photo_2026-08-16_18-32-11.jpg";
 import image3 from "../assets/project-page-images/photo_2026-08-16_18-34-02.jpg";
 
