@@ -8,6 +8,7 @@ import {
   FaCheck,
   FaHeart,
 } from "react-icons/fa";
+import { supabase } from "../lib/supabase";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,8 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,6 +41,10 @@ const Contact = () => {
     if (submitted) {
       setSubmitted(false);
     }
+
+    if (submitError) {
+      setSubmitError("");
+    }
   };
 
   const validateForm = () => {
@@ -56,7 +63,9 @@ const Contact = () => {
 
     if (!email) {
       newErrors.email = "Please enter your email address.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
       newErrors.email = "Please enter a valid email address.";
     }
 
@@ -77,12 +86,36 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
-    console.log("Form submitted:", formData);
+    setLoading(true);
+    setSubmitError("");
+    setSubmitted(false);
+
+    const { error } = await supabase
+      .from("contact_messages")
+      .insert([
+        {
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject.trim(),
+          message: formData.message.trim(),
+        },
+      ]);
+
+    if (error) {
+      console.error("Supabase error:", error);
+
+      setSubmitError(
+        "Something went wrong while sending your message. Please try again."
+      );
+
+      setLoading(false);
+      return;
+    }
 
     setSubmitted(true);
 
@@ -94,6 +127,7 @@ const Contact = () => {
     });
 
     setErrors({});
+    setLoading(false);
   };
 
   const getInputClass = (field) => {
@@ -127,7 +161,7 @@ const Contact = () => {
   ];
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f6faf7] text-[#123928] pt-22">
+    <main className="min-h-screen overflow-hidden bg-[#f6faf7] pt-22 text-[#123928]">
 
       {/* =====================================================
           HERO
@@ -384,7 +418,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Success */}
+              {/* Success Message */}
               <AnimatePresence initial={false}>
                 {submitted && (
                   <motion.div
@@ -423,13 +457,45 @@ const Contact = () => {
                 )}
               </AnimatePresence>
 
+              {/* Error Message */}
+              <AnimatePresence initial={false}>
+                {submitError && (
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      height: 0,
+                      y: -8,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      height: "auto",
+                      y: 0,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      height: 0,
+                      y: -8,
+                    }}
+                    className="mb-6 overflow-hidden"
+                  >
+                    <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-600">
+                      {submitError}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Form */}
               <form
                 onSubmit={handleSubmit}
                 noValidate
                 className="space-y-5"
               >
+
                 {/* Name + Email */}
                 <div className="grid gap-5 sm:grid-cols-2">
+
+                  {/* Name */}
                   <div>
                     <label
                       htmlFor="name"
@@ -456,6 +522,7 @@ const Contact = () => {
                     )}
                   </div>
 
+                  {/* Email */}
                   <div>
                     <label
                       htmlFor="email"
@@ -481,6 +548,7 @@ const Contact = () => {
                       </p>
                     )}
                   </div>
+
                 </div>
 
                 {/* Subject */}
@@ -551,13 +619,23 @@ const Contact = () => {
                 {/* Submit */}
                 <motion.button
                   type="submit"
-                  whileTap={{ scale: 0.98 }}
-                  className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#123928] px-6 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#2e7d5a]"
+                  disabled={loading}
+                  whileTap={{
+                    scale: loading ? 1 : 0.98,
+                  }}
+                  className={`group flex w-full items-center justify-center gap-3 rounded-xl px-6 py-4 text-sm font-semibold text-white transition-colors duration-300 ${
+                    loading
+                      ? "cursor-not-allowed bg-[#789084]"
+                      : "hover:bg-[#123928] cursor-pointer bg-[#2e7d5a]"
+                  }`}
                 >
-                  Send message
+                  {loading ? "Sending..." : "Send message"}
 
-                  <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
+                  {!loading && (
+                    <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
+                  )}
                 </motion.button>
+
               </form>
             </div>
           </motion.div>
@@ -582,8 +660,10 @@ const Contact = () => {
             Thank you for connecting with WINCARE and being part of our
             journey toward healthier communities.
           </p>
+
         </div>
       </section>
+
     </main>
   );
 };

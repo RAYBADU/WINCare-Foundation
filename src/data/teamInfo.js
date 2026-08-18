@@ -7,6 +7,24 @@ const teamInfo = [
     role: "President",
     image: image1,
   },
+  {
+    id: 2,
+    name: "Dr. Eugene Attah Wireko",
+    role: "President",
+    image: image1,
+  },
+  {
+    id: 3,
+    name: "Dr. Eugene Attah Wireko",
+    role: "President",
+    image: image1,
+  },
+  {
+    id: 4,
+    name: "Dr. Eugene Attah Wireko",
+    role: "President",
+    image: image1,
+  },
 ];
 
 export default teamInfo;

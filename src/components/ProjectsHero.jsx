@@ -29,7 +29,7 @@ const ProjectsHero = () => {
             work we're doing to create healthier and stronger communities.
           </p>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Link
               to="#projects"
               className="group inline-flex items-center gap-3 rounded-full bg-[#2e7d5a] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#2e7d5a]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#236548]"
@@ -37,7 +37,7 @@ const ProjectsHero = () => {
               Explore our work
               <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          </div>
+          </div> */}
 
           {/* Small supporting text */}
           <div className="mt-8 flex items-center gap-3 text-sm text-[#5c756a]">

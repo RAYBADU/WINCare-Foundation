@@ -5,7 +5,7 @@ import { FaUsers, FaClipboardList, FaStar } from "react-icons/fa";
 const impactStats = [
   {
     icon: FaUsers,
-    value: "8k+",
+    value: "8,400+",
     label: "People supported",
     color: "from-[#5baa8a] to-[#4a9577]",
   },

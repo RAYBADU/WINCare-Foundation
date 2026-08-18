@@ -62,10 +62,10 @@ const FeaturedProject = () => {
               </div>
             </div>
 
-            <button className="mt-8 flex w-fit items-center gap-3 rounded-full bg-[#123928] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2e7d5a]">
+            {/* <button className="mt-8 flex w-fit items-center gap-3 rounded-full bg-[#123928] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2e7d5a]">
               Explore project
               <FaArrowRight />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

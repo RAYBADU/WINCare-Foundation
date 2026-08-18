@@ -1,6 +1,6 @@
 import React from "react";
-import Eugene from "../assets/team-images/eugene.jpg";
-import Emma from "../assets/team-images/emma.jpg"
+import Eugene from "../assets/team-images/Eugene.jpg";
+import Emma from "../assets/team-images/Emmanuel.jpg"
 
 const teamMembers = [
   {
@@ -10,7 +10,12 @@ const teamMembers = [
   },
   {
     name: "Emmanuel Boateng",
-    role: "Communications Head",
+    role: " Head of Communications",
+    image: Emma,
+  },
+  {
+    name: "Emmanuel Boateng",
+    role: " Head of Communications",
     image: Emma,
   },
 
@@ -24,9 +29,12 @@ const Team = () => {
       Our team
     </p>
 
-    <h2 className="mt-3 text-3xl font-semibold text-[#123928] md:text-4xl">
-      Trusted leadership with a people-first approach.
+    <h2 className="mt-3 text-4xl font-semibold leading-tight tracking-tight text-[#173b2d] md:text-5xl">
+      Trusted leadership with a <span className="text-[#4a9577]">people-first approach.</span> 
     </h2>
+     <p className="mt-5 leading-7 text-gray-600 text-center">
+            A dedicated team united by compassion, purpose, and a comittment to serving others.
+          </p>
   </div>
 
   <div className="grid gap-6 md:grid-cols-3">

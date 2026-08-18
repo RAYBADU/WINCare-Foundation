@@ -118,10 +118,10 @@ const ProjectExplorer = () => {
                 {project.description}
               </p>
 
-              <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#2e7d5a] transition-[gap] duration-200 group-hover:gap-3">
+              {/* <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#2e7d5a] transition-[gap] duration-200 group-hover:gap-3">
                 View project
                 <FaArrowRight />
-              </button>
+              </button> */}
             </div>
           </motion.article>
         ))}

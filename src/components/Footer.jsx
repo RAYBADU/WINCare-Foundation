@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 import logo from "../assets/WINCARE LOGO.png";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  console.log(currentYear);
+
   return (
     <footer className="bg-[#0a2430] text-[#eaf7f4]">
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 lg:px-12">
@@ -88,7 +91,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-[#cde8e1]">
-            © 2026 WINCare. All rights reserved.
+            &copy; {currentYear} WINCare. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-[#d7edf0]">
