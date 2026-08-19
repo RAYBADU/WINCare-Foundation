@@ -5,7 +5,7 @@ import ProjectExplorer from "../components/ProjectExplorer";
 import FeaturedProject from "../components/FeaturedProject";
 
 import BehindProject from "../components/BehindProject";
-import ProjectJourney from "../components/ProjectJourney";
+
 import UpcomingProjects from "../components/UpcomingProjects";
 import ProjectsCTA from "../components/ProjectsCTA";
 
@@ -16,7 +16,7 @@ const Projects = () => {
       <ProjectExplorer />
       <FeaturedProject />
       <BehindProject />
-      <ProjectJourney />
+
       <UpcomingProjects />
       <ProjectsCTA />
     </main>

@@ -1,6 +1,7 @@
 import React from "react";
 import Eugene from "../assets/team-images/Eugene.jpg";
 import Emma from "../assets/team-images/Emmanuel.jpg"
+import Nana from "../assets/team-images/Nana.jpg"
 
 const teamMembers = [
   {
@@ -9,9 +10,9 @@ const teamMembers = [
     image: Eugene,
   },
   {
-    name: "Emmanuel Boateng",
-    role: " Head of Communications",
-    image: Emma,
+    name: "Nana Adjoa Sarkwa",
+    role: " Head of Administration",
+    image: Nana,
   },
   {
     name: "Emmanuel Boateng",

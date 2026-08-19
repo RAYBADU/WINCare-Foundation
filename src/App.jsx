@@ -2,12 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import Donation from "./pages/Donation";
 import Gallery from "./pages/Gallery";
 import TeamPage from "./pages/TeamPage";
+import WhoWeAre from "./pages/WhoWeAre";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/our-story" element={<WhoWeAre />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/donate" element={<Donation />} />

@@ -12,29 +12,29 @@ import {
 } from "react-icons/fa";
 
 import AboutHeroSection from "../components/AboutHeroSection";
-import WhoWeAre from "../components/WhoWeAre";
 import MissionAndVision from "../components/MissionAndVision";
 import CoreValues from "../components/CoreValues";
-import Team from "../components/Team";
 import Newsletter from "../components/Newsletter";
+import FAQ from "../components/FAQ";
+import ImpactStats from "../components/ImpactStats";
+import WhereWeWork from "../components/WhereWeWork";
+import AboutWinCare from "../components/AboutWinCare";
 
-
-const AboutUs = () => {
+const WhoWeAre = () => {
   return (
     <div className="min-h-screen bg-[#f7faf7] text-[#123928]">
       <main className="pt-20">
         <AboutHeroSection />
-        <WhoWeAre />
+        <AboutWinCare />
+        <WhereWeWork />
+        <ImpactStats />
         <MissionAndVision />
         <CoreValues />
-        {/* <Team/> */}
-        <Newsletter/>
-
-       
-
+        <FAQ />
+        <Newsletter />
       </main>
     </div>
   );
 };
 
-export default AboutUs;
+export default WhoWeAre;

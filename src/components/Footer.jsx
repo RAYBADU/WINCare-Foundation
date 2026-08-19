@@ -11,7 +11,6 @@ import logo from "../assets/WINCARE LOGO.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  console.log(currentYear);
 
   return (
     <footer className="bg-[#0a2430] text-[#eaf7f4]">
@@ -44,8 +43,18 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/about" className="transition hover:text-white">
-                  About Us
+                <Link to="/our-story" className="transition hover:text-white">
+                  Our Story
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="transition hover:text-white">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="transition hover:text-white">
+                  Gallery
                 </Link>
               </li>
 
@@ -91,7 +100,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-[#cde8e1]">
-            &copy; {currentYear} WINCare. All rights reserved.
+            &copy; {currentYear} WINCare.  All rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-[#d7edf0]">
